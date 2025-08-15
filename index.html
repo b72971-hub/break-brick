@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Arcade Brick Breaker</title>
+    <style>
+        /* === 기본 스타일 === */
+        * { 
+            padding: 0; 
+            margin: 0; 
+            box-sizing: border-box; /* 너비 계산을 더 쉽게 만듭니다. */
+        }
+        body {
+            background: #111;
+            /* 페이지 전체를 Flexbox 컨테이너로 만들어 중앙 정렬합니다. */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 화면 전체 높이를 사용합니다. */
+        }
+
+        /* === 새로 추가된 스타일 === */
+        
+        /* 게임과 광고를 모두 감싸는 메인 컨테이너 */
+        #game-container {
+            display: flex; /* 자식 요소들을 가로로 나란히 배치합니다. */
+            align-items: center; /* 세로 중앙 정렬 */
+            gap: 20px; /* 요소들 사이의 간격 */
+        }
+
+        /* 광고 박스 스타일 */
+        .ad-box {
+            width: 200px;
+            height: 800px; /* 캔버스 높이보다 약간 작게 설정 */
+            background-color: #f0f0f0;
+            border: 1px solid #ccc;
+            
+            /* 내부 텍스트를 중앙 정렬하기 위한 Flexbox */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            /* 텍스트 스타일 */
+            color: #888;
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: bold;
+        }
+
+        /* === 기존 캔버스 스타일 === */
+        canvas { 
+            background: #eee;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="game-container">
+
+        <div class="ad-box">
+            광고 영역 (200x800)
+        </div>
+
+        <canvas id="gameCanvas" width="1200" height="900"></canvas>
+
+        <div class="ad-box">
+            광고 영역 (200x800)
+        </div>
+
+    </div>
+
+<script src="game.js"></script>
+
+</body>
+</html>
